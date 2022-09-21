@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+}
+
+main{
+    color: wheat;
+    background-image: url(30021141299110.webp);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    background-attachment: scroll;
+
+    background: radial-gradient(#00ffd6,#248d43,yellow);
+}

@@ -1,0 +1,31 @@
+<script>
+
+//var x = true
+console.log("Existe X antes do Bloco?", x);
+
+{
+    var x = true;
+}
+
+console.log("Existe X depois do Bloco?", x);
+
+/*O resultado é undefined, ou seja, a variável existe, mas o Js não consegue definir o seu valor, pois ela só começou a existir depois da instrução console, o js
+faz por de baixo dos panos a seguinte ação
+
+
+var x 
+console.log("Existe X antes do Bloco?", x);
+
+{
+     x = true;
+}
+
+o console vai tentar identificar o que tem dentro de x acima dele, mas como ela não foi definida, ela entrega a mensagem de indefinição
+
+isso só acontecer quando a variável é global
+o conceito disso, é hoisting(Elevação)
+
+*/
+
+
+</script>

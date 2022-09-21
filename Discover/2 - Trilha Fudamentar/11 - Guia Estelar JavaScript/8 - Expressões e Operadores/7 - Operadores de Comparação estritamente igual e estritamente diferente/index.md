@@ -1,0 +1,1 @@
+# Operadores de Comparação estritamente igual e estritamente diferente

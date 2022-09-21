@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "header header" "main aside" "footer footer" ; /* Cada uma dessas aspas, significa uma linha */
+    grid-template-rows: 30px 1fr 40px; /*Alterabdo o tamanho das linhas*/
+    grid-template-columns: 1fr 80px;
+}
+
+header{
+    background-color: red;
+    grid-area: header; /* Após definirmos a quantidade de linhas e colunas, devemos informar atráves do grid-area onde cada elemento vai pertencer*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8px;
+}
+
+main{
+    background-color: blue;
+    grid-area: main;
+}
+
+aside{
+    background-color: aqua;
+    grid-area: aside;
+}
+
+footer{
+    background-color: burlywood;
+    grid-area: footer;
+}

@@ -1,0 +1,39 @@
+<script>
+    // function Person(name){
+    //     this.name = name;
+    //     this.walk = function(){
+    //         return this.name + ' Começou a caminhar' ;
+    //     }
+    //     this.teste = 'Não sei se deu certo';
+    // };
+
+    // const vinicios = new Person('Vinicios'); //Instânciar um novo objeto
+    // const maria = new Person('Maria');// em razão deles pertencerem a mesma função construtora, eles possuem as mesma funcionalidades e propriedades
+
+    // console.log(vinicios.walk());
+    // console.log(vinicios.teste);
+    // console.log(maria.walk());
+
+
+    // let number = new Number(25)
+    // console.log(number)
+
+    // let date = new Date('2020-12-01');
+	// console.log(date)
+
+    function Pessoa(nome, sobrenome){
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+
+        let obterInformação =  function () {
+            console.log(this.nome, this.sobrenome);
+            console.log(Pessoa.nome, Pessoa.sobrenome);
+        };
+    };
+
+    const primeiraPessoa = new Pessoa('Vinicios', 'Macario');
+    Pessoa.obterInformação();
+    console.log(primeiraPessoa.nome);
+
+
+</script>

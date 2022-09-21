@@ -1,0 +1,14 @@
+<script>
+    function sayMyName(name){
+        console.log('Antes de Executar o callback')
+        name(); // por passarmos um função callback como parâmentro, logo podemos executar a função.
+        console.log('Depois de Executar o callback')
+
+    };
+
+    sayMyName(
+        () => {
+            console.log('Estou em um callback')
+        }
+    );
+</script>

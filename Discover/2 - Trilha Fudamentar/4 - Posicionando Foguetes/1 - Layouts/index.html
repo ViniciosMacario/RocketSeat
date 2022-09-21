@@ -1,0 +1,101 @@
+#Page Layouts
+
+É a forma como a página será desenhada, ou seja, como os elementos vão ficar posicionados nela.
+
+Existem várias formas de Alterar o Layouts, dentra as quais,temos;
+
+---> Modo Antigo de trabalhar com Layouts <---
+
+- tables
+- Floats e Clear 
+- FrameWorls e Grid Systems
+
+---> Modo moderno de trabalhar com Layouts <---
+
+-FlexBox
+-Grids
+
+<!--------------------- Aula 2 - Position ------------------------->
+
+Controlar onde, na página, o elemento irá ficar,alterando o fluxo natural dos elementos.
+O fluxo natural dos elementos é um abaixo do outro, ou seja, de cima para baixo,exceto os elementos inline.
+
+- Name: position
+- Value: static | relative | abosolute | fixed
+
+<!--------------------- Aula 3 - Static ------------------------->
+
+O valor padrão do Position nos elementos é o "static", que significa que os elementos vão seguir o fluxo natural da página
+
+<!--------------------- Aula 4 - Relative ------------------------->
+
+O position: relative; destrava 5 novas propriedades, são elas;
+
+- top
+- right
+- bottom
+- left
+- Z-index
+
+Quando um elemento X receber o Position: relative, somente ele será alterado e o resto da página continua seguindo o fluxo natural.
+
+<!--------------------- Aula 4 - Absolute ------------------------->
+
+O position: absolute;
+
+Faz com que o elemento X suba uma camada acima, deixando um vão na camada anterior que logo em seguida
+será ocupada pelos elementos seguintes.
+
+O elemento que receber o absolute, sua referência sempre será a página(se o elemento pai,tiver o position:static;)
+
+Se o elemento pai tive um position: relative;, o elemento que recebeu
+o position: absolute;, vai ocupar a box da cor verde.,
+
+<!--------------------- Aula 5 - Fixed ------------------------->
+
+O position: fixed; 
+
+Vai literalmente fixar um elemento na tela de modo que ao mover a barra, o elemento acompanha também,pois ele está fixo na página,
+como se estive em uma camada acima também.
+
+Ele destrava as 5 propriedades também.
+
+<!--------------------- Aula 6 - Element Stacking(Z-index)  ------------------------->
+
+Element Stacking = Empilhamento de elementos
+
+O Z-index vai trabalhar com a lógica de empilhamento em camada, onde a camada 1 > 0, 2 > 1 ...
+
+<!--------------------- Aula 7 - Flexbox  ------------------------->
+
+#Flexbox
+
+> Nos permiet posicionar os elementos dentro da caixa.
+> Controle em uma dimensão(horizontal ou vertical).
+> Alinhamento, direcionamento,ordernar e tamanhos.
+
+#Flex-direction 
+
+> Qual a direção do flex: horizontal ou vertical - row | column
+
+#Alinhamento
+
+> Justify-content
+> Align-items
+
+
+O comportamento padrão dos elementos filhos após o pai receber o display flex,
+é eles ficarem juntos na horizontal.
+
+<!--------------------- Aula 8 - Grid  ------------------------->
+
+> Posicionamento dos elementos dentro da caixa.
+> Posicionamento horizontal e vertical ao mesmo tempo.
+> Pode ser flexível ou fixo.
+> Cria espaços para os elementos filhos habitarem
+
+
+<!--------------------- Aula 9 - Flexbox ou Grid  ------------------------->
+
+Flexbox e Grid são posicionametos dentro da caixa enquanto o block e inline, são os posicionamentos 
+da caixa em si em relação as caixas ao lado.
