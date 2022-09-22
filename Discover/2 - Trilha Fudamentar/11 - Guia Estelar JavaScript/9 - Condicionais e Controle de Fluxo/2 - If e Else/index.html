@@ -1,0 +1,71 @@
+<script>
+
+// Algoritmo
+
+//  Usuário informa um valor:
+    // O valor informado é um número?
+    //     Se Sim, verifica sua temperatura.
+    //         Sua temperatura é maior que 37ºC?.
+    //             Se sim, retorne um alert, informando que o usuário está com febre.
+    //             Se não, retorne um alert, informando que o usuário não está com febre.
+    //     Se Não, retorne uma informação ao usuário para corrigir o dado informado.
+
+    const temperaturaUsuário = prompt('Digite sua Temperatura ( Cº ):');
+    const teste = (temperaturaUsuário) => {
+        let temperaturaUsuárioFunction = Number(temperaturaUsuário);
+        let validationIfNumberOrNot = () =>{
+            if(isNaN(temperaturaUsuárioFunction)){
+                alert('Digite corretamente a temperatura')
+            }else{
+                if(temperaturaUsuárioFunction > 37){
+                    alert('Você está com febre, sua temperatura é acima da média corporal humana( 37ºC )')
+                }else{
+                    return alert('Você não está com febre, uffa!!')
+                };
+            };
+        };
+
+        return validationIfNumberOrNot();
+    };
+    
+    teste(temperaturaUsuário);
+
+
+
+
+
+    // const temperaturaUsuário = prompt('Digite sua Temperatura ( Cº ):');
+    
+    // const teste = (temperaturaUsuário) => {
+    //     let temperaturaUsuárioFunction = Number(temperaturaUsuário);
+    //     let validationIfNumberOrNot = isNaN(temperaturaUsuárioFunction) ? alert('Digite corretamente a temperatura') : function teste1(temperaturaUsuárioFunction){
+    //         console.log('ok')
+    //     }
+    //     teste1(temperaturaUsuárioFunction);
+
+
+    
+    //     return validationIfNumberOrNot;
+    // };
+    
+    
+    // console.log(teste(temperaturaUsuário));
+
+
+
+// NÃO DEU CERTO!!! - Não conseguimos acessar o valor que o usuário digitou, pois ele será convertido em um valor boolean, logo não vai servi como parâmetro para a Function.
+
+    // const temperaturaUsuário =  (Number(prompt('Digite sua Temperatura ( Cº ):'))) ?
+    // () => {
+    //     let temperatura1 = temperatura;
+    //     if(temperatura1 > 37){
+    //         alert('Você está com febre, sua temperatura é acima da média corporal humana( 37ºC )')
+    //     }else{
+    //         alert('Você não está com febre, uffa!!')
+    //     }
+
+    //     return "Deu certo"
+    // } : 'Digite Corretamente o Dado'
+
+   
+</script>
