@@ -1,0 +1,32 @@
+<script>
+//Dentro de uma estrutura for, vamos colocar nos parênteses 3 informações: 
+//1 º - A primeiro coisa é a inicialização de uma variável
+//2º - A Segunda coisa é a condição para a continuação desse looping, enquanto a condição for verdadeira,ele vai se repetir.
+//3º - A terceira coisa, falamos qual que é a expressão final que vai acontecer assim que terminar o looping
+    // for(let i = 100; i > 0; i--){
+    //     console.log(i)
+    // }
+    /*
+    Ele entra no for e declara uma variável, vai verificar se i é menor que 10, se sim, ele executa o bloco código abaixo,após finalizar a execução, ele incrementa +1 ao i
+    
+    */
+
+    /*Dentro da estrutura de repetição for, podemos usar dois tipos de controles para fazermos algumas ações*/
+    /*Podemos criar uma estrutura condicional dentro do for até uma condição seja atendida e assim para a execução,inclusive antes atráves do break*/
+    // for(let i = 100; i > 0; i--){
+    //     if(i === 49){
+    //         break;
+    //     }
+    //     //Temos o controle de pular alguma coisa também
+    //     console.log(i)
+    // }
+
+
+    for(let i = 10; i > 0; i--){
+        if(i === 5){
+            //Temos o controle de pular alguma coisa também, nesse casom quando chegar no número 5, estamos falando para ele ignorar o 5 e continuar a execução
+            continue;
+        }
+        console.log(i)
+    }
+</script>

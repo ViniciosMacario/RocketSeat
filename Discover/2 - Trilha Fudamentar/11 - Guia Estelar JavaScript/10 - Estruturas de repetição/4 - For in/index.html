@@ -1,0 +1,26 @@
+<script>
+    // For...in, ele vai criar um looping em cima de um Objeto, pegando as propriedades do objeto.
+    //Exemplo:
+
+    let person ={
+        name: 'John',
+        age: 30,
+        weight: 65.5
+    }
+
+    // for(let property in person){
+    //     console.log(property)
+    // }
+
+    for(let property in person){
+        // caso queiramos acessar a propriedade de person, poderiamos acessar algo assim:
+        //1º podemos acessar propriedades dentro de person escrevendo como uma String;
+        console.log(person["age"]) 
+        //2º 
+        console.log(person.name) 
+        //3º Ele vai acessar o valor de cada propriedade pertencente a person
+        console.log(person[property]) 
+
+
+    }
+</script>

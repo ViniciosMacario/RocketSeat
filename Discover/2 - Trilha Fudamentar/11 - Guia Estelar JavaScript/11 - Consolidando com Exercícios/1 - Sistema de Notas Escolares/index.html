@@ -1,0 +1,69 @@
+<script>
+    /*Minha Solução para as Condicionais*/
+
+    // Se notaNúmerica for Maior ou igual a 90 e Menor ou igual a 100:
+    //     Informe a Letra 'A'.
+    // Se notaNúmerica for Maior ou igual a 80 e Menor ou igual a 89:
+    //     Informe a Letra 'B'.
+    // Se notaNúmerica for Maior ou igual a 70 e Menor ou igual a 79:
+    //     Informe a Letra 'C'.
+    // Se notaNúmerica for Maior ou igual a 60 e Menor ou igual a 69:
+    //     Informe a Letra 'D'.
+    // Se notaNúmerica for Menor que 60 e Maior ou igual a 0:
+    //     Informe a letra 'F'.
+    // Se Não:
+    //     Informe 'Nota invalida!'
+
+    function conversionNumberToString(nota){
+        let nota1 = nota;
+
+        if(nota1 >= 90 && nota1 <= 100){
+            console.log('A');
+        }
+        else{
+            if(nota1 >= 80 && nota1 <= 89){
+                console.log('B');
+            }
+            else{
+                if(nota1 >= 70 && nota1 <= 79){
+                    console.log('C');
+                }
+                else{
+                    if(nota1 >= 60 && nota1 <= 69){
+                        console.log('D');
+                    }
+                    else{
+                        if(nota1 < 60 && nota1 >= 0){
+                            console.log('F');
+                        }
+                        else{
+                            console.log('Nota Invalida!')
+                        }
+                    };
+                };
+            };
+        };
+    };
+    conversionNumberToString(150);
+
+    /*Não conseguimos*/
+    // let notasNumber = {
+    //     portugues: 68,
+    //     matemática: 100,
+    //     inglês: 60,
+    //     história: 80,
+    //     Biologia: 70
+    // };
+
+    // let conversionNumberToString = function(notasNumber){
+    //     let nota = notasNumber;
+    //     for(let property in notasNumber){
+    //         console.log(property)
+    //     }
+    //     return nota;
+    // }
+
+    // console.log(conversionNumberToString(notasNumber));
+
+
+</script>
