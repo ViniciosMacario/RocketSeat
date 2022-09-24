@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="classeHeader">
+        <h1 id="ola">Meu Blog</h1>
+    </header>
+    <script>
+        // Vamos aprender a manipular elementos, no aspectos dos seus atributos.
+        // Vamos selecionar a tag Header
+        const header = document.querySelector('header');
+        header.setAttribute('id', 'seletorParaOHeader')
+        // setAttribute() adiciona um atributo ao elemento
+
+        const headerID = document.querySelector('#seletorParaOHeader')
+        console.log(headerID.getAttribute('class'))
+        // getAttribute podemos selecionar qual atributo desejamos
+        //Agora vamos remover um atributo
+
+        header.removeAttribute('id');
+        header.removeAttribute('class');
+        /*
+        Pegar
+        Adicionar
+        Remover
+        */
+    </script>
+</body>
+</html>

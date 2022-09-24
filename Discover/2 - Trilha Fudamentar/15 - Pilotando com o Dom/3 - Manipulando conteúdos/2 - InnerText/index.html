@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Pilotando com o Dom</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>My Blog</h1>
+    <script>
+        // Manipulando conteúdo com 'textContent'
+
+        const element = document.querySelector('h1');
+        element.textContent = 'Hello World!'
+        //Alteramos o CONTEÚDO DO TEXTO com textContent
+
+        // element.textContent += ' Hello World!'//Concatenação com o valor já existente('My Blog')
+
+
+        console.log(element.textContent)
+        //Resultado: Hello World > com element.textContent pegamos apenas o conteúdo que está na tag h1.
+    </script>
+</body>
+</html>

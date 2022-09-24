@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Discover</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1 id="blog-title">My Bloog</h1>
+    <!-- Como fazemos para selecionar a tag H1 contendo o texto com JS? -->
+    <script>
+        //A primeira maneira de selecionar uma tag html é pelo seu ID - método getElementById(), ou seja, é necessário colocar um id na tag.
+        //document.getElementById('blog-title')// Selecionamento a tag h1 por meio do seu id, só que não estamos fazendo nada até o momento com ele.
+        // vamos visualiza-lo no console.log
+
+        const element = document.getElementById('blog-title') 
+        console.log(element);
+        // Resultado: <h1 id="blog-title">My Bloog</h1> - você percebe que ele retorna o filho completo, a partir dai, podemos fazer várias manipulações.
+
+    </script>
+</body>
+</html>

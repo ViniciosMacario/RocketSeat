@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="blog-title">Meu blog</h1>
+    <p id="tagp">ok</p>
+    <script>
+        //QuerySelector() ele seleciona o elemento html pelo seu seletor
+        //Se você tentar procurar uma class sem colocar o ponto(.) no início, igual ao CSS, ele retornará 'Null', pois ele vai identifcar como se fosse uma tag e não existe essa tag.
+        //é possível selecionarmos: tags, class(.) e id(#), ou seja, ele é versátil para todos
+        //O query selector vai retornar apenas o primeiro elemento que ele achar na página, APENAS UM.
+        const element = document.querySelector('[src]');
+        console.log(element);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Meu Blog</h1>
+    <input type="text" name="" id="inputText" value="Estou no elemento">
+    <script>
+        const element = document.querySelector('#inputText');
+        console.log(element.value)
+        //Podemos também verificar o valor do input atráves do value contido na tag.
+        //Resultado: Estou no elemento
+        
+        //Atráves do value podemos colocar o valor que quisermos dentro do input
+        element.value = 'Valor que eu quiser';
+        console.log(element.value)
+        //Resultado: Valor que eu quiser
+        // Qualquer input que receba o value, podemos alterar.
+    </script>
+</body>
+</html>
