@@ -1,0 +1,23 @@
+<script>
+    //Funções aceitam qualquer tipo de dado como argumento
+
+    function imprimirDado(dado){
+        //A função vai fazer primeiro 'Outras tarefas' e depois vai executar a função 'dado()', lembrando o Síncrono
+        console.log('Outras Tarefas');
+        //Função sendo executada
+        console.log(dado());
+    };
+
+    // imprimirDado(1);                     // Number
+    // imprimirDado('Texto');               // String
+    // imprimirDado(true);                  // Boolean
+    // imprimirDado({nome: 'Vinicios'});    // Object
+    // imprimirDado([0,1,2,3,5]);           // Array
+
+    //E o mais interessante, podemos passar uma função como argumento para outra função.
+    // Uma função que não retorna nada, sempre terá o valor de Undefined
+    imprimirDado(function(){
+        return 'Olá Mundo!';
+    });
+
+</script>
