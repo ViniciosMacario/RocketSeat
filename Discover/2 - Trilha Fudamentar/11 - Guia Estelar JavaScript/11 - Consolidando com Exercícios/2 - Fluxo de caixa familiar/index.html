@@ -1,0 +1,123 @@
+<script>
+// Versão Myke
+    const dataincomeFamily = {
+        Receitas: [ 8.550, 2.588, 525 ],
+        Despesas: [ 1.999, 555, 852, 3.850 ]
+    };
+
+    // Fazendo a soma dos elementos dos elementos do array.
+    function sum(array){
+        let total = 0;
+
+        for(let value of array){
+            total += value;
+        };
+
+        return total;
+    }
+
+    function calculateBalance(){
+        const calculateReceitas = sum(dataincomeFamily.Receitas);
+        const calculateDespesas = sum(dataincomeFamily.Despesas);
+
+        let total = calculateReceitas - calculateDespesas;
+
+        
+        if(total > 0){
+            console.log(`O Saldo(Mensal) foi de R$: +${total.toFixed(2)}`)
+        }else{
+            console.log(`O Saldo(Mensal) foi de R$: ${total.toFixed(2)}`)
+        };
+    }
+    calculateBalance()
+
+
+// Minha versão fazendo o exercício de fato.
+
+/*
+    const dataincomeFamily = {
+        Receitas: [ 8500, 2500, 500 ],
+        Despesas: [ 1000, 500, 850, 3500 ]
+    };
+
+    function calcularDiferençaRendaMensal(dataincomeFamily){
+        //Atribuindo os valores das propriedades para as devidas variáveis.
+        let receitas = dataincomeFamily.Receitas;
+        let despesas = dataincomeFamily.Despesas;
+        // console.log(receitas);
+        // console.log(despesas);
+
+        // console.log(receitas[0] + receitas[1]);
+        
+
+        let resultReceitas = 0;
+
+        //Fazer a soma de cada receita gerada e atribuindo a variável "resultReceitas" para acessarmos depois.
+        for(let i = 0; i < receitas.length; i++){
+            resultReceitas += receitas[i]
+        };
+        // console.log(resultReceitas);
+
+        //Fazer a soma de cada despesa gerada e atribuindo a variável "resultDespesas" para acessarmos depois.
+        let resultDespesas = 0;
+        for(let i = 0; i < despesas.length; i++){
+            resultDespesas += despesas[i]
+        };
+        // console.log(resultDespesas);
+
+
+        // Verificando a diferença entre o Dinheiro de Entrada e Despesas.
+        let result = resultReceitas - resultDespesas;
+        // console.log(result);
+
+        if(result > 0){
+            console.log(`O Saldo(Mensal) foi de R$: +${result}`)
+        }else{
+            console.log(`O Saldo(Mensal) foi de R$: ${result}`)
+        };
+    };
+    console.log(calcularDiferençaRendaMensal(dataincomeFamily));
+*/
+
+
+
+// Minha Versão Simplificada
+/*
+
+    //Recebendo os dados do Usuário e armazenando nas variáveis.
+    const entradaReceitas = Number(prompt('Receita (Mensal R$) :'));
+    const entradaDespesas = Number(prompt('Despesas (Mensal R$) :'));
+
+    // console.log(entradaReceitas);
+    // console.log(entradaDespesas);
+
+    // Transferindo os dados para um Objeto que contém seus respectivas propriedades, atendendo principalmente a condição do exercício.
+    const dataincomeFamily = {
+        Receitas: [entradaReceitas],
+        Despesas: [entradaDespesas]
+    };
+
+    // console.log(dataincomeFamily.Receitas);
+    // console.log(dataincomeFamily.Despesas);
+
+    function calcularDiferençaRendaMensal(dataincomeFamily){
+        //Atribuindo os valores das propriedades para as devidas variáveis.
+        let receitas = dataincomeFamily.Receitas;
+        let despesas = dataincomeFamily.Despesas;
+        // console.log(receitas);
+        // console.log(Despesas);
+
+        // Verificando a diferença entre o Dinheiro de Entrada e Despesas.
+        let result = receitas - despesas;
+        // console.log(result);
+
+        if(result > 0){
+            console.log(`O Saldo(Mensal) foi de R$: ${result}`)
+        }else{
+            console.log(`O Saldo(Mensal) foi de R$: ${result}`)
+        };
+    };
+    // Passando o Objecto 'dataincomeFamily' Completo para a Função tratar.
+    calcularDiferençaRendaMensal(dataincomeFamily);
+*/
+</script>

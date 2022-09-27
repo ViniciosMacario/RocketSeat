@@ -10,4 +10,4 @@ ou o método ``POST``, que serve para criar um recurso.
 
 Depois do pedido, a resposta traz um ``Status Code`` do servidor, que é um código sobre o estado do seu pedido, entre esses códigos, estão 200, onde tudo deu certo e sua página foi enviada, 404, onde o servidor não conseguiu encontrar o pedido, 301, que é um redirecionamento para outro local, entre outros além do Status Code, o servidor pode mandar um header e um body.
 
-Existem coisas que podem estar tanto na Request quanto na Response, que são o ``header`` e o ``body``, os Headers são campos informativos, e o body contém conteúdo, podendo ser em forma de HTML ou JSON
+Existem coisas que podem estar tanto na Request quanto na Response, que são o ``header`` e o ``body``, os Headers são campos informativos, e o body contém conteúdo, podendo ser em forma de HTML ou JSON.
