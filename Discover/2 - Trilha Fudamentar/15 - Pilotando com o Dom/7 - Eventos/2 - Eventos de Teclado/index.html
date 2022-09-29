@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>Meu Blog</h1>
+        <input type="text">
+    </header>
+    <script>
+        // Eventos - disparo de teclado
+
+        const input = document.body.querySelector('input')
+        // console.log(input);
+
+        // O evento onkeydown é acionado toda vez que você insere um novo dado por meio do teclado, logo a função é executada toda hora.
+        // O evento onkeyup é acionado quando vc segura uma tecla e depois solta
+        // O evento onkeypress é acionado quando vc independete de segurar uma tecla ou não, ele é acionado
+        input.onkeydown = function(){
+            console.log("Ativando Função !!!")
+        };
+
+
+
+    </script>
+</body>
+</html>

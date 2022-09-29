@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Meu Blog</h1>
+    </header>
+
+    <script>
+        //Navegando pelos elementos irmãos
+            // nextSibling
+            // nextElementSibling
+                // previousSibling
+                // previousElementsSibling
+
+        // Você pode específicar a posição de uma tag baseada no elemento pai.
+        const el = document.querySelector('body script');
+
+        // 1º  nextSibling
+        // const el = document.querySelector('header');
+            // console.log(el.nextSibling);
+            //Resultado: #text - ou seja, ele está levando em consideração os espaços vázios entre cada tag.
+        
+        // 2º  nextElementSibling
+        // const el = document.querySelector('header');
+        // console.log(el.nextElementSibling);
+            //Resultado: Script /Script - ele vai pegar o irmão mais próximo do header, que no caso é o script
+
+        // 3º previousSibling
+            console.log(el.previousSibling);
+            //Resultado: text
+
+        // 4º previousElementsSibling
+            console.log(el.previousElementsSibling);
+            //Resultado: 
+    </script> 
+</body>
+</html>

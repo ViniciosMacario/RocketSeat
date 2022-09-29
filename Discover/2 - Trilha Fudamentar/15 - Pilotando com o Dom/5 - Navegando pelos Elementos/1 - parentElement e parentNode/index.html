@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Meu Blog</h1>
+    </header>
+
+    <script>
+        // Vamos navegar pelos elementos pais
+
+        const body = document.querySelector('body');
+        // Vamos descobrir quem é o pai de body
+        console.log(body.parentNode)
+        // o Nó pai é o html, fazendo referência a estrutura de tree
+
+
+        console.log(body.parentElement)
+        // O resultado é o mesmo 
+    </script>
+</body>
+</html>

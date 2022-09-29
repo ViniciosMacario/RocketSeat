@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>Meu Blog</h1>
+    </header>
+    <script>
+        // Outra maneira de executar eventos com o JavaScript
+
+        const h1 = document.querySelector('h1');
+        // O problema desse tipo de escritura é que se existir outro evento para a mesma tag, ele vai desconsiderar o primeiro e vai considerar o último.
+        // h1.onclick = print;
+        
+        // function print(){
+        //     console.log('Ok')
+        // };
+
+
+        // h1.onclick = function teste(){
+        //     console.log('Outra função')
+        // }
+
+
+        // A maneira recomendada para resolver isso.
+
+
+        h1.addEventListener('click', print)
+
+        function print(){
+            console.log('Ok')
+        };
+
+        h1.addEventListener('click', function(){
+            console.log('Outra função')
+        })
+
+        // Então agora, em apenas um click, estamos chamando mais de um evento ao mesmo tempo e tb função.
+        //o addEventListener vai empilhar as funcionalidades e vai executar todas elas de acordo com a ordem de cima para baixo.
+    </script>
+</body>
+</html>

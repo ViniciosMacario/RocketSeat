@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>Meu Blog</h1>
+    </header>
+    <script>
+        // Adicionando eventos via JavaSCript
+            //Vamos executar vários eventos  via JS, selecionando um elemento html e por meio por meio do js aplicar um evento. 
+
+        const h1 = document.querySelector('h1')
+        // console.log(h1);
+
+        //Agora no h1, podemos adicionar um evento por meio do "ouvidor de eventos" = addEventListener;, adicionando,Evento, ouvir, logo, ouvidor de eventos.
+        // Ele recebe dois argumentos, pois é uma função, o primeiro é o tipo de evento, e o segundo a função a ser executada quando o eventoa contecer.
+        // Não podemos colocar no segundo parametro a função com (), pois ela será executada imediatamente. print()
+        // apenas coloque o nome da função que ele mesmo vai procurar e executar
+        h1.addEventListener('mouseover', print)
+        
+        function print(){
+            console.log("Ativando Função !!!")
+        };
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Desáfio Modal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <button class="buttonOpen">Abrir Janela</button>
+    <button class="buttonClose hidden">Tecle ESC para fechar</button>
+
+    <script>
+        // Jeito do Professor
+        const buttonOpen = document.body.querySelector('.buttonOpen');  // Estrutura html
+        const buttonClose = document.body.querySelector('.buttonClose'); // estrutura html
+
+        // Abrindo a janela
+        buttonOpen.onclick = () =>{
+            //Nessa contexto, é mais interessante usarmos o .remove e .add, pois a leitura de código torna-se muito mais prática e fácil.
+            buttonClose.classList.remove('hidden');
+            buttonOpen.classList.add('hidden');
+        };
+
+        // Vamos criar um sistema de fechar a Janela
+        // entenda que toda hora que apertamos 'ESC' ele está chamando a função para verificar.
+        document.body.addEventListener('keydown', (e) => {
+            // Precisamos passar o 'e' ou 'event' para verificarmos se a tecla digitada é a 'Esc'
+            // Você pode usar o key que é o nome da tecla ou o code para verificar se é pertencente a tecla 'Esc'
+            const isEscKey = e.key;
+
+
+            // Ele não fica mudando toda hora com a tecla 'ESC', porque a princípio ele já tem a class 'hidde'
+            if(isEscKey === 'Escape'){
+                buttonClose.classList.add('hidden');
+                buttonOpen.classList.remove('hidden');
+            };
+        });
+
+
+        // Meu jeito
+        /*
+        const buttonOpen = document.body.querySelector('.buttonOpen'); // false // Estrutura html
+        const buttonClose = document.body.querySelector('.buttonClose'); // true // estrutura html
+        
+
+        buttonOpen.addEventListener('click', functionClick);
+
+        function functionClick(){
+            let clickButtonOpen = buttonOpen.classList.toggle('hidden');  // true // somente boolean
+            let clickbuttonClose = buttonClose.classList.toggle('hidden'); // false // somente boolean
+
+                if(clickButtonOpen == true){
+                    document.body.addEventListener('keydown', eventKeyboardEsc);
+
+                    function eventKeyboardEsc(e){
+                        // let eventCode = e.keyCode;
+                         if(e.keyCode == 27){
+                            buttonOpen.classList.toggle('hidden'); // false
+                            buttonClose.classList.toggle('hidden'); // true
+
+                            eventCode = 0;
+                         }else{
+                            alert('Aperte a Tecla Correta!');
+                         };
+                    }
+
+                }else{
+                    console.log('teste')
+                }
+        };
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Meu Blog
+        </h1>
+    </header>
+    <script>
+        // Criando e adicionando elementos
+
+        // criandoElement
+        const div = document.createElement('div');
+        // adicionando um texto na div
+        div.innerText = "Olá Devs";
+
+        // Até o momento, não é possível visualizarmos a div com seu conteúdo, pois não informamos em que posição da hierárquia vamos coloca-la
+
+        // Vamos colocar dentro de body
+        const body = document.querySelector('body')
+        // append() significa que ele vai adicionar alguma coisa depois, nesse caso, ele vai add a div, ele vai adicionar a div depois do último filho de body
+        // body.append(div)
+
+        // Ele vai adicionar antes de qualquer filho.
+        body.prepend(div)
+
+    </script>
+</body>
+</html>

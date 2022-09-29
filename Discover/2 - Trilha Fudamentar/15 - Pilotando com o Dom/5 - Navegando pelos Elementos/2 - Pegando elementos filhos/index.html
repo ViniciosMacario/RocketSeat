@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Meu Blog</h1>
+    </header>
+    <script>
+        //Navegando pelos Elementos filhos
+            // childNodes(Nodelist)
+            // children(HTMLCollection) - Ele elimina os espaços vázios do type text
+
+        const el = document.querySelector('body');
+        console.log(el.childNodes);
+
+        // firstChild firstElementChild
+        console.log(el.firstChild);
+
+        // lastChild lastElementChild
+        console.log(el.lastChild);
+
+
+
+        // firstChild firstElementChild - não vai levar em consideração o text, o texto vázio
+        console.log(el.firstElementChild);
+        
+        // lastChild lastElementChild
+        console.log(el.lastElementChild);
+
+    </script>
+</body>
+</html>

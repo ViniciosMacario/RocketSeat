@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <!--
+            - Primeiro temos que ter o elemento para disparar o evento
+            - temos a forma de colocar direto no elemento html atráves do 'on' seguido do evento desejado.
+            - Quando o evento acontecer, queremos que uma função no JavaScript seja executada para alguma coisa.
+            
+
+            onclick="print()"" - deu um click com o mouse na tag h1
+            ondblclick="print()" - deu double click com o mouse na tag h1
+            onmousemove="print()" - toda vez que o mouse entrar na área do h1 - importando para interações com usuário via 3d.
+        -->
+        <h1 onmousemove="print()">
+            Meu Blog
+        </h1>
+    </header>
+    <script>
+        // Eventos 
+        function print(){
+            console.log('Evento Onclick ativado!!')
+        }
+    </script>
+</body>
+</html>
