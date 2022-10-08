@@ -14,7 +14,7 @@ function delayloaderPage(){
     cssLoadContainer.classList.remove('loadContainerHidden')
     cssLoadContainer.classList.add('cssLoadContainer')
 
-    setTimeout(loaderPage, 3000);
+    setTimeout(loaderPage, 2000);
 }
 
 function loaderPage(){
