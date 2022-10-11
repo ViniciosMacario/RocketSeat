@@ -9,9 +9,28 @@
 <body>
     <script>
         // Sintaxe de Promise
+        // Quando criamos um objeto Promise, seu status inicial é Pending
+        let aceitar = false;
 
-        new Promise(() => {})
-        
+        console.log('Chamando um Uber');
+        const promessa = new Promise((resolve, reject) => {
+            if(aceitar){
+                return resolve('Uber a Caminho!')
+            }
+            return reject('Uber Cancelado!');
+        });
+
+        console.log('Aguardando Uber');
+
+        //Resultados para a Promise
+        promessa
+            .then(result => console.log(result)) // caso dê certo, temos o 'então'
+            .catch(erro => console.log(erro)) // vamos tentar capturar o possível erro
+            .finally(() => console.log('Fim da Corrida!')) // quando tudo acabar, dando certo ou errado, temos o 'finalmente'
+
+
+
+        // Podemos utilizar essa lógica para fazer pedido para url ...
     </script>
 </body>
 </html>

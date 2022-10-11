@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Vamos usar as Promises de maneira prática
+            // Vamos pegar os dados da Api do Github do nosso user
+                //Vamos acessar o Json e receber esses dados por meio do Js
+        
+        // Como não sabemos quanto tempo vai levar para acessarmos os dados da API, logo, temos que usar a Promise.
+
+        //fecht() é uma função que vai receber como primeiro argumento a URL que queremos fazer o 'fecth/buscar'
+            //fecth é toda uma estrutura de Promise.
+    //   fetch('https://api.github.com/users/JackWyus')
+    //     .then(response => response.json()
+    //         .then(data => {
+    //             fetch(data.repos_url)
+    //                 .then(res => res.json()
+    //                     .then(d => console.log(d)))
+    //         }))
+        // Vamos escrever isso tudo de outra forma, uma forma mais simples
+
+        fetch('https://api.github.com/users/JackWyus')
+            .then(  response => response.json())
+            .then(  data => fetch(data.repos_url)) // na arrow fuction, quando temos somente um elemento, ela já retorna ele. Essa linha está retornando uma nova promessa
+            .then(  res => res.json()) // gerando uma nova promise
+            .then(  d => console.log(d))// Chamamos todos esse 'then' de encadeamento, quando precisamos fazer uma chamada após outra chamada, uma dependa da outra.
+            .catch( erro => console.log(erro))// caso a promisse não dê certo em qualquer momento dessa cadeia, temos somente um 'cath' para capturamos o erro.
+            
+    </script>
+</body>
+</html>
