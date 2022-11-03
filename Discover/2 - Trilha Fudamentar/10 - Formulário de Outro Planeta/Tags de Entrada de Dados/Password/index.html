@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    Atributos de validação de campo
+    
+    - minlength="8" -> quantidade de caracteres minimos
+    -maxlength="2 -> quantidade de caracteres máximo
+    - size - controla o tamanho do input
+    - patter - podemos fazer o controle de máximo e mínimo de caracteres sem precisar dos atributos anteriroes.
+    -title - nótificação ao usuário sobre o input
+   -->
+
+  <form>
+    <input 
+      type="password" 
+
+      size="10"
+      pattern="[0-9a-fA-F]{8}"
+      title="Mínimo de 8 caracteres/ letras maiusculas"
+      autocomplete="on"
+      required
+    />
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
