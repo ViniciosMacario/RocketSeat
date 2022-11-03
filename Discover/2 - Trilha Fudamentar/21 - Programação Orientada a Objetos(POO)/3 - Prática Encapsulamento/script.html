@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Maneira Estrutural de Programação
+
+      let altura = 50;
+      let largura = 100;
+
+      function calcularArea() {
+        return altura * largura
+      }
+
+      let areaTotal = calcularArea();
+    
+    // Maneira Estrutural de Programação
+    
+    // Orientado a Objetos
+
+      class Poligono {
+        constructor(altura, largura) {
+          // A primeira função que sucede a class é o 'Constructor'
+          this.altura = altura;
+          this.largura = largura;
+        }
+
+        get area() {
+          return this.#calcularArea()
+        }
+
+        // O uso da 'Hash(#)' implica na ocultação do elemento.
+        // Vamos esconder o modo do funcionamento interno do 'calcularArea', ele não vai ser vísivel lá fora
+        #calcularArea() {
+          return this.altura * this.largura
+        }
+      }
+      // Criando um Objeto
+      // esse operador 'new' está criando um novo objeto a partir da class 'Poligono'
+      let poligono = new Poligono(50, 60)
+      console.log(poligono)
+      console.log(poligono.area)
+      // console.log(poligono.#calcularArea())
+
+    // Orientado a Objetos
+  </script>
+</body>
+</html>

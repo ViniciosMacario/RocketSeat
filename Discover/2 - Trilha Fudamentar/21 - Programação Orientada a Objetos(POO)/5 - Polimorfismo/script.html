@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Polimorfismo
+    class Atleta{
+      var peso;
+      var categoria;
+
+      constructor(peso){
+        this.peso = peso;
+      }
+
+      definirCategoria(){
+        if(this.peso <= 50){
+          this.categoria = 'Infantil';
+        }
+        else if(this.peso <= 65){
+          this.categoria = 'Juvenil';
+        }
+        else{
+          this.categoria = 'Adulto'
+        }
+      }
+    }
+
+    // Vamos criar uma subClasse a partir de uma class pai que vai herdar propriedades e métodos
+    //Mas precisamos adaptar esses métodos e propriedades para o contexto de 'lutador', essa adaptação de class chamamos de 'Polimorfismo'
+    class Lutador extends Atleta{
+      constructor(peso){
+        super(peso)
+      }
+
+      // Reescrevendo
+      definirCategoria() {
+        if (this.peso <= 55) {
+          this.categoria = 'pluma';
+        }
+        else if (this.peso <= 60) {
+          this.categoria = 'leve';
+        }
+        else if(this.peso <= 75){
+          this.categoria = 'meio-leve'
+        }
+        else{
+          this.categoria = 'Pesado'
+        }
+      }
+    }
+  </script>
+</body>
+</html>

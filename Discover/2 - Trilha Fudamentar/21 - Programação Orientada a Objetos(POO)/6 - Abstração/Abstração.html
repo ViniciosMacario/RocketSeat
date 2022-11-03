@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Definir uma Super classe
+      //Lembrando que só podemos declarar os atributos e métodos.
+    class Parafuso{
+      constructor(){
+        if(this.constructor === Parafuso)
+        throw new Error('Classe abstrata não pode ser Instânciada')
+      }
+      get Tipo(){
+        throw new Error(`Método 'get tipo()' precisa ser implementado`)
+      }
+    };
+
+    class Fenda extends Parafuso{
+      constructor(){
+        super()
+      }
+      get Tipo(){
+        return 'Fenda'
+      }
+    }
+
+    class Philips extends Parafuso{
+      constructor(){
+        super()
+      }
+      get Tipo(){
+        return 'Philips'
+      }
+    }
+
+    class Allen extends Parafuso{}
+
+
+    //Criar e usar
+
+    // let parafuso = new Parafuso() // 'Classe abstrata não pode ser Instânciada'
+    let fenda = new Fenda()
+    let philips = new Philips()
+    let allen = new Allen()
+
+    console.log(fenda.Tipo) // Fenda
+    console.log(philips.Tipo) // Philips
+    // console.log(allen.Tipo) // 'get tipo()' precisa ser implementado
+
+
+    // Nesse exemplo, só existe parafuso se ele for de algum tipo específico como: Fenda, Philips ou Allen.
+  </script>
+</body>
+</html>
