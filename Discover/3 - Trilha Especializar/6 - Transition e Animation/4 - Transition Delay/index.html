@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: black;
+    }
+
+    .box-red{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;     
+    }
+    .box-red{
+      background-color: blueviolet;
+      /*
+        Primeiro: property
+        Segundo: duration
+        Terceiro: timing-function
+        Quarto: delay
+      */
+      transition: background-color 1s ease 4s; 
+      
+    }
+
+    .box-red:hover{
+      background-color: rgb(1, 247, 26);
+      transition-property: background-color;
+      transition-duration: 1s;
+      transition-timing-function: ease-in;
+      transition-delay: 4s; /*O delay vai iniciar a transição depois do tempo estipulado aqui, ele não tem nada a ver com a duração da animação*/
+    }
+
+    </style>
+</head>
+<body>
+  <div class="box-red"></div>
+
+
+</body>
+</html>
