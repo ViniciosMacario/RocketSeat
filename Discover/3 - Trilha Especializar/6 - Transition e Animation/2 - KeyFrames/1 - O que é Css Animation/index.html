@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: black;
+    }
+
+    .box-red, .box-green{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;     
+    }
+
+    .box-red{
+      background-color: blueviolet;
+      transition: background-color 1s ease 2s; 
+      
+    }
+    .box-red:hover{
+      background-color: rgb(1, 247, 26);
+      transition-property: background-color;
+      transition-duration: 1s;
+      transition-timing-function: ease-in;
+      transition-delay: 2s; /*O delay vai iniciar a transição depois do tempo estipulado aqui, ele não tem nada a ver com a duração da animação*/
+    }
+
+    .box-green{
+      background-color: green;
+      transition: all 1s linear 0.5s;
+    }
+
+    .box-green:hover{
+      background-color: darkmagenta;
+      width: 250px;
+      height: 250px;
+      font-size: 200px;
+      transition: all 1s cubic-bezier(0.29, 1.01, 1, -0.68);
+      /* transform: rotate(45deg); */
+      color: white;
+      filter: brightness(1);
+      border-radius: 10px;
+    }
+
+    </style>
+</head>
+<body>
+  <div class="box-red"></div>
+  <div class="box-green">Ola</div>
+
+
+</body>
+</html>

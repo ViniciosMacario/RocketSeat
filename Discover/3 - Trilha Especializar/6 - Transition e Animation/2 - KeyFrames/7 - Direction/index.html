@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    body{
+      height: 100vh;
+      background-color: black;
+    }
+    .ball{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: blueviolet;
+
+      position: relative;
+
+      animation-name: example-two; 
+      animation-duration: 3s; 
+      animation-delay: 2s; 
+      animation-iteration-count: infinite; 
+      /* animation-direction:  reverse; Ao invès da animação começar no 0% e ir até o 100%, ele fará o contrário */
+      /* animation-direction:  alternate; Ele vai de 0% até o 100% e ao chegar em sem, ele retorna imediatamente para 0% */
+      animation-direction: alternate-reverse; /*Ele começa 100% e vai até zero*/
+    }
+
+    @keyframes example-two{
+      0%{
+        top: 0;
+        left: 0;
+        background-color: aqua;
+      }
+      25%{
+        top: 250px;
+        left: 250px;
+        background-color: rgb(0, 255, 8);
+      }
+      50%{
+        top: 500px;
+        left: 0px;
+        background-color: rgb(0, 34, 255);
+
+      }
+      100%{
+        top: 900px;
+        left: 250px;
+        background-color: rgb(255, 6, 164);
+      }
+    }
+
+    </style>
+</head>
+<body>
+  <div class="ball"></div>
+
+
+</body>
+</html>

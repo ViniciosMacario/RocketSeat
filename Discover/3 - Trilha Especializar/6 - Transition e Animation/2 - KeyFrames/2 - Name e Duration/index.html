@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    body{
+      height: 100vh;
+      background-color: black;
+    }
+    .ball{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: blueviolet;
+
+      position: relative;
+
+      animation-name: example-one; /*Estamos direcionando a animação para a ball*/
+      animation-duration: 5s; /*Para a animação acontecer, precisamos primeiro informar o elemento que sofrerá a animação e a duração da mesma.*/
+    }
+
+
+
+    /*apenas criamos a animação, mas precisamos direcionar para o elemento que sofrerá essa animação*/
+    /*Na frente do @keyframes ele espera que você nomei a animação.*/
+    @keyframes example-one{
+
+      /*O from é como a animação vai começar na tela, seu início*/
+      from{
+        background-color: chartreuse;
+      }
+
+      /*Para onde a animação tem que ir*/
+      to{
+        background-color: blueviolet;
+      }/*Quando a animação acabar, ela vai voltar para seu estado original definido em ball*/
+    }
+
+    </style>
+</head>
+<body>
+  <div class="ball"></div>
+
+
+</body>
+</html>
