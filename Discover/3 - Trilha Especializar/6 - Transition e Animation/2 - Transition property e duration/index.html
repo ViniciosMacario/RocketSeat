@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      height: 100vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: black;
+    }
+
+    .box-red{
+      width: 100px;
+      height: 100px;
+      border-radius:  50%;
+    }
+
+    .box-red{
+      background-color: blueviolet;
+      transition: all; /*'all' significa que ele vai fazer a transição qualquer coisa que mudar, pode ser o width,background,font-size, opacitty...*/
+      transition-duration: 1s;  /*Para deixar a volta da transição suave também, é necessário colocar no elemento original*/
+    }
+    .box-red:hover{
+      width: 50px; /*Podemos modificar também o tamanho da estrutura suavemente*/
+      background-color: yellow;
+      transition-property: background-color, width; /*Estamos informando qual propriedade queremos fazer a transição*/
+      transition-duration: 1s; /* Duração para ocorrer toda a transição*/
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box-red"></div>
+</body>
+</html>

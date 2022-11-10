@@ -5,7 +5,7 @@
 import axios from 'axios';
 
 
-// Trabalhando com mais de uma Promisse ao Mesmo tempo, damos o nome dissoe de 'agrupamento de Promises' usando Array. 
+// Trabalhando com mais de uma Promisse ao Mesmo tempo, damos o nome disso de 'agrupamento de Promises' usando Array. 
 Promise.all([
     axios.get('https://api.github.com/users/jackwyus'),
     axios.get('https://api.github.com/users/jackwyus/respo')

@@ -10,10 +10,10 @@ export function Card(props){
 }
 
 
-
 /*
 
 >  O que são componentes React JS?
+
     O que são componentes React? Geralmente, componentes React são como funções JavaScript.
     Eles aceitam entradas como propriedades (chamadas “props”) e retornam novos elementos React, os chamados JSX.
 
@@ -24,6 +24,4 @@ export function Card(props){
     mas apenas com a apresentação dos dados na aplicação.
 
     esse componente recebe dados via propriedades. O React os encapsula em um objeto “props” que fica disponível para ser consumido dentro do componente.
-
-
 */

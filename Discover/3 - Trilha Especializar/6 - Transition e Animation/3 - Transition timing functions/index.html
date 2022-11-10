@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .line{
+      width: 100%;
+      height: 25px;
+      margin-bottom: 10px;
+      background-color: blue;
+
+      transition: width; /*Transição suave do width*/
+      transition-duration: 1s;
+    }
+    /*Se passarmos o mouse em cima do body, o line será afetado por isso*/
+    body:hover .line{
+      width: 20px;
+      background-color: rgb(35, 63, 4);
+    }
+
+    .ease{
+      transition-timing-function: ease; /* ease é o default - Início lento, rápido no meio e final lento (este é o padrão)*/
+    }
+
+    .linear{
+      transition-timing-function: linear; /* Mesma velocidade do início ao fim */
+    }
+
+    .easy-in{
+      transition-timing-function: ease-in; /* Início lento */
+    }
+
+    .ease-out{
+      transition-timing-function: ease-out; /* Final lento*/
+    }
+
+    .easy-in-out{
+      transition-timing-function: ease-in-out; /* Início e fim lentos, mas o meio ainda é rápido */
+    }
+
+    /*Observação: ela vai sair da zona permitida e depois vai retornar, isso se o último valor for maior que 1*/
+    .cube{
+      transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); /*Permite definir seus próprios valores em uma função cubic-bezier*/
+    }
+    </style>
+</head>
+<body>
+  <div class="line"></div>
+  <div class="line ease"></div>
+  <div class="line linear"></div>
+  <div class="line easy-in"></div>
+  <div class="line easy-in-out"></div>
+
+  <div class="line cube"></div>
+
+</body>
+</html>

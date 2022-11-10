@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from 'react';
 import './styles.css';
-import {Card} from '../../components/Card'
+
+import React, {useEffect, useState} from 'react';
+import { Card } from '../../components/Card'
 
 
 export function Home() {
@@ -23,7 +24,6 @@ export function Home() {
 
   useEffect(() => {
     //Corpo do UseEffect que será executado
-
     fetch('https://api.github.com/users/JackWyus')
     .then(response => response.json())
     .then(data => {
@@ -53,19 +53,19 @@ export function Home() {
         type="text" 
         placeholder="Digite seu nome"
         onChange={e =>  setStudentName(e.target.value)}
-        />
+      />
 
       <button type="button" onClick={handleAddStudent} >Adicionar</button>
 
       {
         students.map(student => (
-        <Card 
-          key={student.time}
-          name={student.name} 
-          time={student.time}
-        />
+          <Card 
+            key={student.time}
+            name={student.name} 
+            time={student.time}
+          />
         ))
-        }
+      }
     </div>
   )
 }
@@ -75,14 +75,6 @@ export function Home() {
 7º UseEffect
 
 Quando um UseEffect é executado assim que nossa interface renderizada,ou seja, é automático 
-
-
-
-
-
-
-
-
 
 6º Hooks
 
@@ -96,7 +88,6 @@ a partir de componentes totalmente funcionais.
 
 Quando você tem componentes que são gerados a partir de uma estrutura de repetição
 utilizar uma chave ÚNICA para evitar complicações performáticas...
-
 
 
 4º Imutabilidade 
@@ -163,7 +154,4 @@ export function Card({name, time}){
     )
 }
 
-
 */
-
- 
